@@ -1,0 +1,16 @@
+
+@mixin button-border($vert, $horiz, $color, $radius) {
+  display: block;
+  background: transparent;
+  padding: $vert $horiz;
+  border: 2px solid $color;
+  border-radius: $radius;
+}
+
+@mixin button-fill($vert, $horiz, $color, $radius) {
+  display: block;
+  background: $color;
+  padding: $vert $horiz;
+  border: 2px solid $color;
+  border-radius: $radius;
+}

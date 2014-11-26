@@ -1,0 +1,332 @@
+// font-size
+$micro: 11px;
+$smallest: 12px;
+$smaller: 14px;
+$small: 16px;
+$reg: 18px;
+$reg2: 19px;
+$reg3: 20px;
+$med1: 23px;
+$med2: 25px;
+$med3: 30px;
+$big: 40px;
+$bigger: 68px;
+
+// weight
+$normal: 400;
+$exob: 600;
+$latob: 700;
+$latobl: 900;
+
+header {
+  .button {
+    a, span {
+      @include lato($latob, $smaller);
+      text-decoration: none;
+    }
+  }
+  .menu-toggle {
+    color: $blue;
+    span {
+      text-transform: uppercase;
+    }
+  }
+  .sign-in {
+    a {
+      color: $blue;
+    } 
+    &:hover {
+      a {
+        color: $white; 
+      }
+    }
+  }
+  .free-trial a{
+    color: $white;
+  }
+}
+
+.tracker {
+  .status {
+    h2, h3 {
+      text-transform: uppercase;
+    }
+    h3 {
+      @include lato($normal, $med1);
+      color: $white;
+    }
+    h2 {
+      @include lato($latobl, $big+8);
+      color: $green;
+    }
+  }
+
+  .status-details {
+    h3 {
+      @include lato($latob, $med2);
+      color: $white;
+      text-transform: uppercase;
+    }
+    p, a {
+      @include lato($normal, $reg);
+      color: $white;
+    }
+    a {
+      text-decoration: underline;
+      margin-top: 20px;
+      display: block;
+    }
+  }
+
+  .tracker-percent {
+    .percent-box {
+      h2 {
+        @include lato($latobl, $bigger);
+        color: $green;
+        line-height: 19px;
+        .small {
+          display: block;
+          line-height: 22px;
+          @include exo($normal, $med1);
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+.feature {
+  h2 {
+    @include lato($latobl, $bigger);
+    text-transform: uppercase;
+    line-height: 60px;
+    margin: 0 0 25px;
+  }
+  p {
+    @include exo($normal, $med1);
+    line-height: 34px;
+    strong {
+      @include exo($exob, $med1);
+      color: $lightgreen;
+    }
+  } 
+  h2, p, button {
+    color: $white;
+  }
+  .button {
+    @include lato($latob, $reg2);
+    a {
+      display: block;
+      color: $white;
+      text-transform: uppercase;
+      text-align: center;
+    }
+  }
+
+}
+
+.main-content {
+  h2 {
+    @include lato($latob, $med2);
+    color: $blue; 
+  }
+  p {
+    @include lato($normal, $reg2);
+    color: $gray;
+    line-height: 30px;
+  }
+  a.more {
+    @include lato($latobl, $reg);
+    color: $green;
+  }
+  .model-portfolio {
+    h2 {
+      @include lato($latobl, $big);
+      text-transform: uppercase;
+    }
+    p {
+      @include exo($normal, $med1);
+    }
+  }
+}
+
+.performance {
+  .title {
+    h2 {
+      @include lato($latobl, $med3);
+      color: $white; 
+      text-transform: uppercase;
+    }
+    h3 {
+      @include lato($normal, $med3);
+      color: $white;
+      font-style: italic;
+    }
+  }
+  table {
+    td.heading {
+      @include lato($latob, $small);
+    }
+    td {
+      @include lato($latob, $smaller);
+      color: $white;
+    }
+    td.total {
+      @include lato($latobl, $smaller);
+      color: $green;
+    }
+  }
+  .investment-value-detail {
+    h2 {
+      @include lato($latob, $reg);
+      color: $blue;
+      text-transform: uppercase;
+    }
+    p {
+      @include lato($normal, $micro);
+      color: $gray;
+    }
+  }
+}
+
+.trial-area {
+  h2 {
+    @include lato($latobl, $big);
+    color: $blue;
+    text-transform: uppercase;
+  }
+  p {
+    @include exo($normal, $med1);
+    color: $gray;
+    a {
+      @include exo($exob, $med1);
+      color: $gray;
+    }
+  }
+  .button {
+    @include lato($latobl, $reg3);
+    color: $white;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
+
+.list-box li {
+  a {
+    @include animated(.2s);
+    @include lato($latobl, $reg);
+    color: $green; 
+    &:hover {
+      color: $blue;
+    }
+  }
+}
+
+.your-saved-portfolio {
+  h2 {
+    @include lato($latobl, $big);
+    color: $white;
+    text-transform: uppercase;
+  }
+  .portfolio-table {
+    table {
+      tr.titles {
+        td {
+          @include lato($latob, $small); 
+          @include max-screen($mobile) {
+            font-size: $micro;
+          }
+        }
+      }
+      tr.totals {
+        td {
+          @include lato($latobl, $smaller);
+          color: $lightgreen;
+          text-transform: uppercase;
+          @include max-screen($mobile) {
+            font-size: $micro;
+          }
+        }
+      }
+      tr {
+        td {
+          @include lato($latob, $smaller);
+          color: $white; 
+          @include max-screen($mobile) {
+            font-size: $micro;
+          }
+        }
+      } 
+    }
+  }
+}
+
+.models {
+  h4 {
+    @include lato($normal, $reg2);
+    color: $gray;
+    line-height: 30px;
+  }
+  p, li {
+    @include lato($normal, $smaller);
+    color: $gray;
+    line-height: 22px;
+  }
+}
+
+.from-the-blog {
+  h2 {
+    @include lato($latobl, $big);
+    color: $blue;
+    text-transform: uppercase;
+  }
+  .posts {
+    li {
+      h2 {
+        @include lato($latob, $reg3);
+      }
+      .meta-data {
+        p {
+          @include lato($normal, $smallest);
+          color: $gray;
+        }
+      }
+      .summary {
+        p {
+          @include lato($normal, $smaller);
+          color: $blue; 
+        }
+      }
+      .read-more {
+        @include lato($latob, $smallest);
+        color: $white;
+      }
+    }
+  }
+}
+
+footer {
+  li, a {
+    color: $white;
+    text-transform: uppercase;
+  }
+  .footer-nav li a {
+    @include animated(.2s);
+    @include lato($latob, $smaller);
+    &:hover {
+      color: $green;
+    }
+  }
+  .button {
+    @include lato($latob, $small);
+  }
+  .legal li, .legal li a {
+    @include lato($normal, $micro);
+  }
+  .legal li a {
+    @include animated(.2s);
+    &:hover {
+      color: $green;
+    }
+  }
+}

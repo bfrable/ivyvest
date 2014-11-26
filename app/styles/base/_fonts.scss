@@ -1,0 +1,14 @@
+@import url(http://fonts.googleapis.com/css?family=Exo+2:400,600);
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700,900,400italic);
+
+@mixin lato($weight: 400, $size: 18px) {
+  font-family: 'Lato', sans-serif;
+  font-weight: $weight;
+  font-size: $size;
+}
+
+@mixin exo($weight: 400, $size: 18px) {
+  font-family: 'Exo 2', sans-serif;
+  font-weight: $weight;
+  font-size: $size;
+}

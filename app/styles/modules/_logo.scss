@@ -1,0 +1,18 @@
+.logo {
+  h1 {
+    @include background(logo, 148px, 47px);
+    margin: -10px auto 0 auto;
+    a {
+      @include image-link();
+    }
+  }
+}
+
+.logo-reversed {
+  h1 {
+    @include background(logo-reversed, 122px, 38px);
+    a {
+      @include image-link();
+    }
+  }
+}

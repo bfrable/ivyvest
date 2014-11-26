@@ -1,0 +1,232 @@
+.feature.header-banner, .get-started-banner {
+  background: transparent url("../images/header-bg.jpg") 0 0 no-repeat;
+  background-size: cover;
+  padding: 158px 0 145px;
+  .wrapper {
+    overflow: auto;
+    .container {
+      float: left;
+      max-width: 600px;
+    }
+  }
+  .user-buttons {
+    margin: 80px 0 0;
+    .fill {
+      @include button-fill(13px, 60px, $green, 4px);
+      display: inline-block;
+      margin: 0 30px 30px 0;
+    }
+    .border {
+      @include button-border(13px, 53px, $green, 4px);
+      display: inline-block;
+      border-color: $white;
+    }
+  }
+}
+
+.get-started-banner {
+  background: transparent url("../images/home-bottom-bg.jpg") 0 0 no-repeat;
+  background-size: cover;  
+}
+
+.home.main-content {
+  overflow: auto;
+  padding: 112px 0 0;
+  .content {
+    padding-left: 35px;
+    h2 {
+      padding-bottom: 23px;
+      &:before {
+        content: "";
+        display: block;
+        width: 23px;
+        height: 15px;
+        background: transparent url('../images/icon-leaf.png') 0 0 no-repeat;
+        position: relative;
+        left: -35px;
+        top: 24px;
+      }
+    }
+    a {
+      display: block;
+      padding-top: 35px;
+    }
+  }
+  .vision, .white-papers, .fees {
+    padding: 0 0 137px;
+    overflow: auto;
+  }
+  .vision {
+    .pie-chart, .content {
+      @include span-columns(6);
+    }
+    .pie-chart {
+      @include max-screen($tablet-b) {
+        @include span-columns(5);
+      }
+      @include max-screen($mobile-b) {
+        display: none;
+      }
+    }
+    .content {
+      h2 {
+        padding-top: 47px;
+      }
+      @include max-screen($tablet-b) {
+        @include span-columns(6);
+        h2 {
+          padding-top: 0;
+        }
+      }
+      @include max-screen($mobile-b) {
+        @include span-columns(12);
+      }
+    }
+  }
+  .white-papers {
+    .content {
+      @include span-columns(6.5);
+      @include max-screen($tablet-b) {
+        @include span-columns(6);
+      }
+      @include max-screen($mobile-b) {
+        @include span-columns(12);
+      }
+    }
+    .prize {
+      @include span-columns(4.5);
+      @include shift(1);
+      @include max-screen($tablet-b) {
+        @include span-columns(5);
+        @include shift(0);
+      }
+      @include max-screen($mobile-b) {
+        display: none;
+      }
+    }
+  }
+  .fees {
+    .bar-graph {
+      @include span-columns(6);
+      @include max-screen($tablet-b) {
+        @include span-columns(5);
+      }
+      @include max-screen($mobile-b) {
+        display: none;
+      }
+    }
+    .content {
+      @include span-columns(5.5);
+      @include shift(-.5);
+      @include max-screen($tablet-b) {
+        @include span-columns(6);
+        @include shift(0);
+      }
+      @include max-screen($mobile-b) {
+        @include span-columns(12);
+      }
+    }
+  }
+}
+
+.get-started-banner {
+  .user-buttons {
+    max-width: 295px;
+  }
+  .button {
+    @include button-fill(15px, 30px, $green, 4px);
+  }
+}
+
+.performance {
+  background: $blue;
+  padding-top: 20px;
+  .title {
+    @include span-columns(3.1);
+    @include shift(.4);
+    margin-top: 50px;
+    @include max-screen($tablet-b) {
+      @include span-columns(11.6);
+    }
+  }
+  .performance-table {
+    @include span-columns(7.75);
+    @include shift(.25);
+    @include max-screen($tablet-b) {
+      @include span-columns(12);
+      @include shift(0);
+    }
+    table { 
+      width: 100%;
+      @include max-screen($mobile) {
+        width: 80%;
+        display: block;
+        margin: 0 auto;
+      }
+    }
+    tr {
+      border-bottom: 1px solid $border;
+      &:first-child {
+        border-bottom: 0;
+        padding-bottom: 10px;
+        td {
+          padding-bottom: 10px;
+        }
+      }
+      td {
+        padding: 8px 0 8px 100px;
+        @include max-screen($mobile) {
+          padding-left: 30px;
+        }
+        &:first-child {
+          padding: 0;
+        }
+      }
+    }
+    & + .wrapper {
+      overflow: auto;
+    }
+  }
+  .performance-bars {
+    background: transparent url('../images/static-portfolio-bg.png') 0 0 repeat;
+    padding: 40px;
+    margin: 40px 0 145px 0;
+    overflow: auto;
+    .bar-graph {
+      margin-bottom: 40px;
+      @include max-screen($mobile-b) {
+        display: none;
+      }
+    }
+    .investment-value-detail {
+      @include span-columns(6);
+      @include max-screen($tablet-b) {
+        @include span-columns(12);
+      }
+    }
+    .bar-legend {
+      @include span-columns(3);
+      @include shift(3);
+      background: transparent url('../images/static-portfolio-legend.png') 0 0 no-repeat;
+      height: 80px;
+      @include max-screen($tablet-b) {
+        @include span-columns(12);
+        @include shift(0);
+        margin-top: 40px;
+      }
+      @include max-screen($mobile-b) {
+        display: none;
+      }
+    }
+  }
+}
+
+.trial-area {
+  background: transparent url('../images/trial-bg.png') 0 0 repeat;
+  padding: 120px 0;
+  .button {
+    @include button-fill(15px, 30px, $green, 4px);
+    max-width: 300px;
+    margin: 40px 0 0;
+  }
+}

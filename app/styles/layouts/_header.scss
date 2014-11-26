@@ -1,0 +1,72 @@
+header {
+  padding: 47px 0 34px;
+  background: $white;
+  overflow: auto;
+  .menu-toggle, .logo, .user-buttons {
+    @include span-columns(4);
+  }
+  @include max-screen($mobile-b) {
+    .logo {
+      @include shift(4);
+      @include omega();
+    }
+    .user-buttons {
+      @include span-columns(12);
+      margin-top: 50px;
+      ul {
+        float: none !important;
+        max-width: 175px;
+        margin: 0 auto; 
+      }
+    }
+  }
+  .menu-toggle {
+    span#hamburger {
+      @include animated(.4s);
+      display: block;
+      @include background(hamburger, 29px, 17px);
+      padding: 0 0 0 48px;
+      cursor: pointer;
+      &.open {
+        @include background(close-menu, 89px, 30px);
+      }
+    }
+  }
+  .logo {
+    h1 {
+      @include background(logo, 148px, 47px);
+      margin: -10px auto 0 auto;
+      @include max-screen($mobile-b) {
+        background-size: 80%;
+      }
+      a {
+        @include image-link();
+      }
+    }
+  }
+  .user-buttons{
+    ul {
+      list-style: none;
+      float: right;
+      li {
+        @include animated(.2s);
+      }
+      li.sign-in {
+        @include button-border(2px, 15px, $blue, 4px);
+        display: inline-block;
+        &:hover {
+          @include button-fill(2px, 15px, $blue, 4px);
+          display: inline-block;
+        }
+      }
+      li.free-trial {
+        @include button-fill(2px, 15px, $green, 4px);
+        display: inline-block;
+        &:hover {
+          @include button-fill(2px, 15px, $blue, 4px);
+          display: inline-block;
+        }
+      }
+    }
+  }
+}
