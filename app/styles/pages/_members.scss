@@ -10,16 +10,21 @@ body.members {
 .tracker {
   background: $blue;
   overflow: auto;
-  padding: 55px 0;
+  .wrapper {
+    height: 200px;
+  }
   .status {
     @include span-columns(4);
+    @extend %vertical-align;
   }
   .status-details {
     @include span-columns(5.5);
+    @extend %vertical-align;
   }
   .tracker-percent {
     @include span-columns(2.5);
     @include omega();
+    @extend %vertical-align;
     .percent-box {
       background: $black;
       padding: 30px 20px 20px 20px;
@@ -82,6 +87,9 @@ body.members {
       padding-bottom: 27px;
       i {
         float: right;
+      }
+      &:last-child {
+        padding-bottom: 0;
       }
     }
   }

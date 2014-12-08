@@ -34,17 +34,26 @@
     width: 54px;
     float: left;
     position: absolute;
-    top: 53.5px;
+    top: 71.5px;
     left: 30px;
   }
   span {
     color: white;
     font-size: 15px !important;
+    text-transform: uppercase;
   }
   .value {
-    color: #ccff66
+    color: #ccff66;
+    @include lato($latobl, $med3);
+    &:after {
+      content: "%";
+    }
   }
   .key {
     padding-right: 20px;
+    margin-top: -20px;
+    position: relative;
+    top: -5px;
+    @include lato($latob, $smaller);
   }
 }
