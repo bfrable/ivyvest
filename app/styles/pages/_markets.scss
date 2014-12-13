@@ -1,0 +1,17 @@
+.markets-data.main-content {
+	.fundamentals {
+		overflow: auto;
+		li {
+			@include span-columns(4);
+			background: $box-color;
+			margin-bottom: 20px;
+			text-align: center;
+			&:nth-child(3n) {
+				@include omega();
+			}
+			.wrap {
+				padding: 10px;
+			}
+		}
+	}
+}

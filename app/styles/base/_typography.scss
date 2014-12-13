@@ -1,3 +1,23 @@
+h2 {
+  @include lato($latobl, $big)
+}
+
+h3 {
+  @include lato($latob, $med3);
+}
+
+h4 {
+  @include lato($normal, $reg2);
+  color: $gray;
+  line-height: 30px; 
+}
+
+p, li {
+  @include lato($normal, $smaller);
+  color: $gray;
+  line-height: 22px;
+}
+
 header {
   .button {
     a, span {
