@@ -1,16 +1,49 @@
+.tracker.markets-stocks {
+	.title {
+		float: left;
+		@extend %vertical-align;
+	}
+	.markets-stock-percent {
+		float: right;
+		@include outer-container();
+		@extend %vertical-align;
+		min-width: 404px;
+		.percent-box {
+			@include span-columns(6);
+			h2 { text-align: center; }
+		}
+	}
+}
+
 .markets-data.main-content {
-	.fundamentals {
+	margin: 85px 0 0;
+	.market-statistics {
 		overflow: auto;
+		ul { 
+			margin-top: 30px;
+			overflow: hidden;
+		}
 		li {
 			@include span-columns(4);
 			background: $box-color;
 			margin-bottom: 20px;
 			text-align: center;
+			position: relative;
 			&:nth-child(3n) {
 				@include omega();
 			}
 			.wrap {
 				padding: 10px;
+				height: 453px;
+			}
+			.title, .data-detail {
+				position: absolute;
+				width: 100%;
+			}
+			.title { top: 40px; }
+			.data-detail { bottom: 40px; }
+			.data-value {
+				@extend %vertical-align;
 			}
 		}
 	}

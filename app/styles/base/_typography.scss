@@ -47,7 +47,7 @@ header {
 }
 
 .tracker {
-  .status {
+  .status, .title {
     h2, h3 {
       text-transform: uppercase;
     }
@@ -58,7 +58,7 @@ header {
     }
     h2 {
       @include lato($latobl, $big+8);
-      color: $green;
+      color: $medgreen;
     }
   }
 
@@ -79,17 +79,19 @@ header {
     }
   }
 
-  .tracker-percent {
+  .tracker-percent, .markets-stock-percent {
     .percent-box {
       h2 {
         @include lato($latobl, $bigger);
-        color: $green;
+        color: $medgreen;
         line-height: 19px;
         .small {
           display: block;
           line-height: 22px;
           @include exo($normal, $med1);
           color: $white;
+          text-align: left;
+          padding-left: 13px;
         }
       }
     }
@@ -128,7 +130,7 @@ header {
 
 .main-content {
   h2 {
-    @include lato($latob, $med2);
+    @include lato($latob, $big);
     color: $blue; 
   }
   p {
@@ -148,6 +150,23 @@ header {
     p {
       @include exo($normal, $med1);
     }
+  }
+  .market-statistics {
+    h2 {
+      @include lato($latobl, $big);
+    }
+  }
+}
+.main-content.home {
+  h2 {
+    @include lato($latob, $med2);
+  }
+}
+
+
+.sidebar {
+  h2 {
+    @include lato($latob, $med2);
   }
 }
 
@@ -192,7 +211,7 @@ header {
 
 .trial-area {
   h2 {
-    @include lato($latobl, $big);
+    @include lato($latobl, $med3);
     color: $blue;
     text-transform: uppercase;
   }

@@ -11,6 +11,21 @@ body {
   padding: 0 20px;
 }
 
+.percent-box {
+  background: $black;
+  padding: 33px 20px 23px 20px;
+  border-radius: 8px;
+  position: relative;
+  .superscript {
+    position: absolute;
+    top: 0;
+    left: 0;
+    top: 15px;
+    left: 5px;
+    font-size: 45px;
+  }
+}
+
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;

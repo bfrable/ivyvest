@@ -25,11 +25,6 @@ body.members {
     @include span-columns(2.5);
     @include omega();
     @extend %vertical-align;
-    .percent-box {
-      background: $black;
-      padding: 30px 20px 20px 20px;
-      border-radius: 8px;
-    }
   }
   @include max-screen($tablet) {
     .status {
