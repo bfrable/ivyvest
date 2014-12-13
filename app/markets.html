@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width">
     <link rel="shortcut icon" href="/favicon.ico">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/ult-reset/reset.css" />
@@ -14,7 +15,6 @@
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- endbuild -->
     <!-- build:js scripts/vendor/modernizr.js -->
     <script src="bower_components/modernizr/modernizr.js"></script>
@@ -74,19 +74,34 @@
           <h2>Fundamentals</h2>
 
           <ul>
-            <li>
+            <li class="neutral">
               <div class="wrap">
                 <div class="title"><h3>Title</h3></div>
-                <div class="data-value">
-                  <h2>26.7</h2>
+
+                <div class="data-value" style="margin: 0 auto">
+                    <div id="container-speed" style="width: 300px; height: 200px;"></div>
                 </div>
+
                 <div class="data-detail">
                   <p>85th Percentile Extensive</p>
                 </div>
               </div>
             </li>
 
-            <li>
+            <li class="warning">
+              <div class="wrap">
+                <div class="title"><h3>Title</h3></div>
+                <div class="data-value">
+                  <h2>-26.7</h2>
+                </div>
+                <div class="data-detail">
+                  <p>85th Percentile Extensive</p>
+                </div>                
+              </div>
+
+            </li>
+
+            <li class="neutral">
               <div class="wrap">
                 <div class="title"><h3>Title</h3></div>
                 <div class="data-value">
@@ -99,24 +114,12 @@
 
             </li>
 
-            <li>
+            <li class="warning">
               <div class="wrap">
                 <div class="title"><h3>Title</h3></div>
                 <div class="data-value">
-                  <h2>26.7</h2>
-                </div>
-                <div class="data-detail">
-                  <p>85th Percentile Extensive</p>
-                </div>                
-              </div>
-
-            </li>
-
-            <li>
-              <div class="wrap">
-                <div class="title"><h3>Title</h3></div>
-                <div class="data-value">
-                  <h2>26.7</h2>
+                  <div class="directional-arrows"></div>
+                  <i class="fa fa-arrow-up"></i>
                 </div>
                 <div class="data-detail">
                   <p>85th Percentile Extensive</p>
@@ -124,7 +127,7 @@
               </div>
             </li>
 
-            <li>
+            <li class="warning">
               <div class="wrap">
                 <div class="title"><h3>Title</h3></div>
                 <div class="data-value">
@@ -136,11 +139,11 @@
               </div>
             </li>
 
-            <li>
+            <li class="good">
               <div class="wrap">
                 <div class="title"><h3>Title</h3></div>
                 <div class="data-value">
-                  <h2>26.7</h2>
+                  <h2>+26.7</h2>
                 </div>
                 <div class="data-detail">
                   <p>85th Percentile Extensive</p>
@@ -206,9 +209,11 @@
         <script src="scripts/main.js"></script>
         <script src="http://code.highcharts.com/highcharts.js"></script>
         <script src="http://code.highcharts.com/modules/exporting.js"></script>
-        <script src="scripts/charts/funds-chart.js"></script>
-        <script src="scripts/charts/portfolio-chart.js"></script>
-        <script src="scripts/charts/tsp-chart.js"></script>
+        
+        <script src="http://code.highcharts.com/highcharts-more.js"></script>
+        <script src="http://code.highcharts.com/modules/solid-gauge.js"></script>
+
+        <script src="scripts/charts/market-gauge.js"></script>        
         <!-- endbuild -->
 </body>
 </html>

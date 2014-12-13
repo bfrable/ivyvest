@@ -1,3 +1,5 @@
+.highcharts-button { display: none; }
+
 .tracker.markets-stocks {
 	.title {
 		float: left;
@@ -32,6 +34,15 @@
 			&:nth-child(3n) {
 				@include omega();
 			}
+			&.good {
+				h2 { color: $good; }
+			}
+			&.neutral {
+				h2 { color: $neutral; }
+			}
+			&.warning {
+				h2 { color: $warning; }
+			}
 			.wrap {
 				padding: 10px;
 				height: 453px;
@@ -44,6 +55,14 @@
 			.data-detail { bottom: 40px; }
 			.data-value {
 				@extend %vertical-align;
+			}
+			.directional-arrows {
+				background: transparent url("../images/graph-lines.png") 0 0 no-repeat;
+				width: 230px;
+				height: 200px;
+				position: absolute;
+				top: -30px;
+				left: 61px;
 			}
 		}
 	}
