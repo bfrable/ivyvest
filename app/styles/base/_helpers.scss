@@ -4,6 +4,7 @@
   width: $width;
   height: $height;
 }
+
 @mixin image-link($width: inherit, $height: inherit) {
   display: block;
   width: $width;
@@ -18,7 +19,6 @@
     -moz-transition: All $speed ease-in-out;
     -o-transition: All $speed ease-in-out;
 }
-
 
 // Vertical Align
 %vertical-align {
