@@ -1,0 +1,24 @@
+#progressBar {
+	width: 200px;
+	height: 32px;
+	background-color: #e0e5e9;
+	margin: 0 auto;
+	div {
+        height: 100%;
+        color: #fff;
+        text-align: right;
+        line-height: 22px; /* same as #progressBar height if we want text middle aligned */
+        width: 0;
+        background-color: $neutral;
+	}
+}
+
+.percent-text {
+	position: absolute;
+	top: -65px;
+	font-size: 60px;
+	display: block;
+	margin: 0 auto;
+	left: 30%;
+	text-align: center;
+}
