@@ -18,6 +18,20 @@ p, li {
   line-height: 22px;
 }
 
+.menu {
+  a {
+    @include lato($latob, $reg);
+    color: white;
+    text-transform: uppercase;
+  }
+  .form {
+    h4 { 
+      color: $white; 
+      font-size: 18px;
+    }
+  }
+}
+
 header {
   .button {
     a, span {

@@ -5,6 +5,7 @@ jQuery(function ($) {
         Elements: {
             progressEl: $("#progressBar"),
             content: $("#content"),
+            hamburger: $('#hamburger')
         },
 
         progressBar: function() {
@@ -17,8 +18,17 @@ jQuery(function ($) {
 			progress(20, helpers.Elements.progressEl);            
         },
 
+        toggleMenu: function() {
+            helpers.Elements.hamburger.on('click', function(){
+                $(this).toggleClass('open');
+                $('.menu').toggleClass('open'); 
+                console.log('duh');
+            });
+        },
+
         init: function() {
             helpers.progressBar();
+            helpers.toggleMenu();
         }
 
     };

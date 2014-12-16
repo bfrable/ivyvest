@@ -7,7 +7,7 @@ header {
   }
   @include max-screen($mobile-b) {
     .logo {
-      @include shift(4);
+      @include shift(3.2);
       @include omega();
     }
     .user-buttons {
@@ -15,7 +15,7 @@ header {
       margin-top: 50px;
       ul {
         float: none !important;
-        max-width: 175px;
+        max-width: 255px;
         margin: 0 auto; 
       }
 
@@ -23,13 +23,14 @@ header {
   }
   .menu-toggle {
     span#hamburger {
-      @include animated(.4s);
+      @include animated(.1s);
       display: block;
       @include background(hamburger, 29px, 17px);
       padding: 0 0 0 48px;
       cursor: pointer;
       &.open {
-        @include background(close-menu, 89px, 30px);
+        @include background(close, 29px, 20px);
+        background-size: 47%;
       }
     }
   }

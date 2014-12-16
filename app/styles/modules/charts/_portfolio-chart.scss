@@ -3,7 +3,7 @@
     max-width: 1120px;
     .contain {
       float: left;
-      width: 50%;
+      width: 100%;
       @include max-screen($mobile-b) {
         float: left;
         clear: left;

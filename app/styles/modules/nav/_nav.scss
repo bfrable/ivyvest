@@ -1,23 +1,102 @@
 .menu {
+	@include animated(.2s);
 	overflow: auto;
 	background: $blue;
+	height: 0;
+	padding: 0;
+	&.open {
+		height: auto;
+		padding: 70px 0;
+	}
 	ul {
 		list-style-type: none;
 	}
+	.leaf, .navigation, .socmed, .form {
+		height: 188px;
+	}
 	.leaf {
 		@include span-columns(2.4);
-		background: #101010;
+		border-right: 1px solid #427276;
+	    h1 {
+	      @include background(ivyvest-leaf, 113px, 73px);
+	      margin: -10px auto 0 auto;
+	      @extend %vertical-align;
+	      @include max-screen($mobile-b) {
+	        background-size: 80%;
+	      }
+	      a {
+	        @include image-link();
+	      }
+	    }
 	}
 	.navigation {
-		@include span-columns(3.3);
-		background: #202020;
+		@include span-columns(3.05);
+		border-right: 1px solid #427276;
+		ul {
+			@extend %vertical-align;
+		}
+		li {
+			margin-bottom: 22px;
+		}
 	}
 	.socmed {
-		@include span-columns(3.3);
-		background: #303030;
+		@include span-columns(3.05);
+		border-right: 1px solid #427276;
+		ul {
+			@extend %vertical-align;
+		}
+		li {
+			margin-bottom: 20px;
+			@include background(ICONS, 25px, 25px);
+			&.facebook {
+				background-position-y: -46px;
+			}
+			&.amazon {
+				background-position-y: -101px;
+			}
+			a {
+				display: block;
+				text-indent: -8400px;
+			}
+		}
 	}
 	.form {
-		@include span-columns(3);
-		background: #404040;
+		@include span-columns(3.5);
+	    input {
+	      border-radius: 6px;
+	      border: 1px solid #fff;
+	      background: rgba(255,255,255,0.2);
+	      padding: 15px 10px;
+	      color: rgba(255,255,255,0.7);
+	      width: 100%;
+	      margin: 15px 0;
+	      @include lato($latob, $reg3);
+	    }
+	    button {
+	      &.fill {
+	        @include button-fill(13px, 60px, $green, 4px);
+	        display: inline-block;
+	        margin: 0 30px 30px 0;
+	        width: 100%;
+	        color: $white;
+	        @include lato($latobl, $reg3);
+	        text-transform: uppercase;
+	        box-shadow: 0px 3px 0px #99b92c; 
+	      }
+	    }
+	}
+	.leaf, .navigation, .socmed, .form { 
+		@include max-screen($mobile-b) {
+			@include span-columns(12);
+			border-right: 0;
+			border-bottom: 1px solid #427276;
+
+		}
+	}
+	.form {
+		@include max-screen($mobile-b) {
+			border-bottom: 0;
+			margin-top: 20px;
+		}
 	}
 }

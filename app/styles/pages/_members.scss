@@ -134,19 +134,26 @@ body.members {
     list-style: disc;
     margin-left: 15px;
   }
-  .tsp {
-    @include span-columns(5.5);
-  }
-  .mutual-fund {
-    @include span-columns(5.5);
-    @include shift(1);
-  }
-  @include max-screen($mobile-b) {
-    .tsp, .mutual-fund {
+  .chart1, .chart2 {
+    @include span-columns(6);
+    @include max-screen($tablet-b) {
       @include span-columns(12);
-      @include shift(0);
-      margin-bottom: 30px;
+      margin-top: 30px;
     }
+    .wrapper {
+      clear: both;
+    }
+    h3 {
+      @include lato($latobl, 30px);
+      color: $blue;
+    }
+  }
+}
+
+.chart-titles {
+  .chart-title {
+    @include span-columns(6);
+    text-align: center;
   }
 }
 
@@ -202,6 +209,7 @@ body.members {
       @include max-screen($mobile-b) {
         @include span-columns(12);
         @include shift(0);
+        margin-bottom: 20px;
       }
       .post-title {
         h2 {

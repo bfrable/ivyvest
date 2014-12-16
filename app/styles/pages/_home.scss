@@ -1,7 +1,7 @@
 .feature.header-banner, .get-started-banner {
   background: transparent url("../images/header-bg.jpg") 0 0 no-repeat;
   background-size: cover;
-  padding: 158px 0 145px;
+  padding: 138px 0 138px;
   .wrapper {
     overflow: auto;
     .container {
@@ -15,6 +15,7 @@
       @include button-fill(13px, 60px, $green, 4px);
       display: inline-block;
       margin: 0 30px 30px 0;
+      box-shadow: 0px 3px 0px #99b92c;
     }
     .border {
       @include button-border(13px, 53px, $green, 4px);
