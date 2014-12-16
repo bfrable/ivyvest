@@ -18,6 +18,7 @@ header {
         max-width: 175px;
         margin: 0 auto; 
       }
+
     }
   }
   .menu-toggle {
@@ -67,6 +68,17 @@ header {
           display: inline-block;
         }
       }
+    }
+    .avatar {
+      float: left;
+      margin: -9px 25px 0 0;
+      img {
+        border-radius: 20px;
+        position: relative;
+        top: 10px;
+        margin-right: 10px;
+      }
+      a { color: $blue; }
     }
   }
 }

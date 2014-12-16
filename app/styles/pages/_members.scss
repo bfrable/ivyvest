@@ -10,6 +10,15 @@ body.members {
 .tracker {
   background: $blue;
   overflow: auto;
+  &.warning {
+    background: $warning-dark;
+    .status h2, .percent-box h2 {
+      color: $white;
+    }
+  }
+  &.not-saved {
+    background: $dark;
+  }
   .wrapper {
     height: 200px;
   }

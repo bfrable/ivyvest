@@ -31,8 +31,19 @@
 			margin-bottom: 20px;
 			text-align: center;
 			position: relative;
-			&:nth-child(3n) {
-				@include omega();
+			@include min-screen($tablet-b) {
+				&:nth-child(3n) {
+					@include omega();
+				}
+			}
+			@include max-screen($tablet-b) {
+				@include span-columns(6);
+				&:nth-child(2n + 2) {
+					@include omega();
+				}
+			}
+			@include max-screen($mobile-b) {
+				@include span-columns(12);
 			}
 			&.good {
 				h2 { color: $good; }

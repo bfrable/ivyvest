@@ -1,0 +1,23 @@
+.menu {
+	overflow: auto;
+	background: $blue;
+	ul {
+		list-style-type: none;
+	}
+	.leaf {
+		@include span-columns(2.4);
+		background: #101010;
+	}
+	.navigation {
+		@include span-columns(3.3);
+		background: #202020;
+	}
+	.socmed {
+		@include span-columns(3.3);
+		background: #303030;
+	}
+	.form {
+		@include span-columns(3);
+		background: #404040;
+	}
+}
