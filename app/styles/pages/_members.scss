@@ -122,6 +122,27 @@ body.members {
       }
     }
   }
+  .user-controls {
+    @include outer-container();
+    @include span-columns(5);
+    margin-top: 40px;
+    overflow: auto;
+    li {
+      cursor: pointer;
+      width: 100px;
+      float: left;
+      list-style-type: none;
+      margin-right: 20px;
+      border-radius: 4px;
+      border: 2px solid $white;
+      color: $white;
+      text-align: center;
+      padding: 4px 0;
+      &:hover {
+        @include button-fill(4px, 10px, $green, 2px);
+      }
+    }
+  }
 }
 
 .models {
@@ -229,6 +250,9 @@ body.members {
         max-width: 90px;
         text-align: center;
         margin-top: 15px;
+        &:hover {
+          @include button-fill(4px, 10px, $dark, 2px);
+        }
       }
       .post-content-wrapper {
         padding: 20px

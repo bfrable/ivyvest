@@ -30,7 +30,7 @@ footer {
     max-width: 115px;
     float: right;
     &:hover {
-      border-color: $green;
+      @include button-fill(7px, 15px, $green, 4px);
     }
     @include max-screen($tablet-b) {
       display: none;
