@@ -195,6 +195,7 @@
     }
     & + .wrapper {
       overflow: auto;
+      clear: both;
     }
   }
   .performance-bars {
